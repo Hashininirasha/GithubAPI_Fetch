@@ -1,4 +1,3 @@
-
 const input = document.querySelector('input')
 const btn = document.querySelector('button')
 const card = document.querySelector('.card')
@@ -35,7 +34,7 @@ async function add_repo () {
         return `
             <div class="card">
                 <h2>${repo.name}</h2>
-                <a href="${repo.clone_url}" target="_blank">Take a look at this repo ></a>
+                <a href="${repo.clone_url}" target="_blank">View repo <i class="fa-brands fa-github"></i></a>
             </div>
         `
     }).join('')
@@ -72,7 +71,7 @@ btn.addEventListener('click', async () => {
                     <span>Repos</span>
                 </div>
             </div>
-            <a href="${search_result.html_url}" target="_blank">Visit Github Profile ></a>
+            <a href="${search_result.html_url}" target="_blank">View Github Profile <i class="fa-brands fa-github"></i></a>
         `
     }
 })
