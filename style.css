@@ -117,4 +117,17 @@ body {
     max-width: 100%;
     overflow-wrap: break-word;
 }
-
+.repos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.repos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
