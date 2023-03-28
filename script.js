@@ -27,10 +27,11 @@ const repos = async (username) => {
     }
 }
 
+
 async function add_repo () {
     const reposData = await repos(input.value)
     console.log(reposData);
-    repos_container.innerHTML = reposData.map(repo => {
+    repos_container.innerHTML = reposData.slice(0,3).map(repo => {
         return `
             <div class="card">
                 <h2>${repo.name}</h2>
