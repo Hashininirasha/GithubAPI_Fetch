@@ -10,6 +10,8 @@ const user = async (username) => {
     const resp = await fetch(`${API}${username}`)
     const respData = await resp.json()
     return respData;
+
+    
     }catch(err){
         console.log(err)
     }
@@ -29,8 +31,9 @@ const repos = async (username) => {
 
 async function add_repo () {
     const reposData = await repos(input.value)
-    console.log(reposData);
-    repos_container.innerHTML = reposData.slice(0,3).map(repo => {
+
+    console.log("error", reposData);
+    repos_container.innerHTML = reposData.length>0 && reposData.slice(0,3).map(repo => {
         return `
             <div class="card">
                 <h2>${repo.name}</h2>
